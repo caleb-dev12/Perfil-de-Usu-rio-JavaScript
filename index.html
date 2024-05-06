@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Arquivo bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Perfil do Usuário</title>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Quadro de Informações do Usuário -->
+    <div class="container mt-4">
+        <div class="card user-profile">
+            <img src="https://github.com/caleb-dev12.png" alt="Perfil" id="userImage" class="profile-image card-img-top mx-auto d-block" style="width: 150px; border-radius: 50%;">
+            <div class="card-body text-center">
+                <h1 id="userName" class="card-title">Nome do Usuário</h1>
+                <p id="userAge" class="card-text">Idade: 25</p>
+                <p id="userAddress" class="card-text">Endereço: Rua Exemplo, Bairro Bom, Estado Legal</p>
+                <p id="userBio" class="card-text">Biografia: Aqui vai uma breve biografia do usuário.</p>
+            </div>
+        </div>
+
+        <!-- Formulário para mudança das informações -->
+            <!-- O formulário invoca a função que foi feita no arquivo javascript -->
+        <form id="userInfoForm" onsubmit={updateUserInfo(event)} class="mt-4">
+            <div class="form-group">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="age">Idade:</label>
+                <input type="number" id="age" name="age" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="address">Endereço:</label>
+                <input type="text" id="address" name="address" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label for="bio">Biografia:</label>
+                <textarea id="bio" name="bio" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Atualizar</button>
+        </form>
+    </div>
+</body>
+</html>
